@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         this.ddSelection = (Spinner) findViewById(R.id.ddSelection);
         ArrayList<String> selectionOptionsList = new ArrayList<>();
         selectionOptionsList.add("Words");
@@ -30,15 +31,22 @@ public class MainActivity extends AppCompatActivity {
         this.ddSelection.setAdapter(arrayAdapter);
     }
 
+
     public void btnCalculateOnClick(View view) {
         EditText edUserInput = findViewById(R.id.edUserInput);
         TextView tvOutput = findViewById(R.id.tvOutput);
         String userInputText = edUserInput.getText().toString();
+        String words[]=userInputText("\\s");
 
         String selection = this.ddSelection.getSelectedItem().toString();
         if(selection.equalsIgnoreCase("Chars")){
             int count = getCharsCount(userInputText);
             tvOutput.setText(String.valueOf(count));
+
+            if(selection.equalsIgnoreCase("Words")){
+                int userInputText=words.length;;
+                tvOutput.setText(words.length);
+
         }
     }
 }

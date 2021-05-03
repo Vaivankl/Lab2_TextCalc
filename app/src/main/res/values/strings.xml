@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TextCounterSample</string>
+    <string name="app_name">Text calculator</string>
     <string name="btn_calculate_caption">Calculate</string>
     <string-array name="planets_array">
         <item>Mercury</item>
