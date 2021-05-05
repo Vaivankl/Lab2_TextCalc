@@ -36,17 +36,16 @@ public class MainActivity extends AppCompatActivity {
         EditText edUserInput = findViewById(R.id.edUserInput);
         TextView tvOutput = findViewById(R.id.tvOutput);
         String userInputText = edUserInput.getText().toString();
-        String words[]=userInputText("\\s");
+        String words[]=userInputText.split("\\s");
 
         String selection = this.ddSelection.getSelectedItem().toString();
         if(selection.equalsIgnoreCase("Chars")){
             int count = getCharsCount(userInputText);
             tvOutput.setText(String.valueOf(count));
 
-            if(selection.equalsIgnoreCase("Words")){
-                int userInputText=words.length;;
+            else (selection.equalsIgnoreCase("Words"));
                 tvOutput.setText(words.length);
 
-        }
+            }
     }
 }
