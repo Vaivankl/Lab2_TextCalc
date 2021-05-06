@@ -42,12 +42,11 @@ public class MainActivity extends AppCompatActivity {
         if(selection.equalsIgnoreCase("Chars")) {
             int count = getCharsCount(userInputText);
             tvOutput.setText(String.valueOf(count));
-
         }
 
-            else {
-                tvOutput.setText(words.length);
+        else{
+            tvOutput.setText(String.valueOf(words.length));
+        }
 
-            }
     }
 }
