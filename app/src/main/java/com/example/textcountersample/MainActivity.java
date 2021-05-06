@@ -39,11 +39,13 @@ public class MainActivity extends AppCompatActivity {
         String words[]=userInputText.split("\\s");
 
         String selection = this.ddSelection.getSelectedItem().toString();
-        if(selection.equalsIgnoreCase("Chars")){
+        if(selection.equalsIgnoreCase("Chars")) {
             int count = getCharsCount(userInputText);
             tvOutput.setText(String.valueOf(count));
 
-            else (selection.equalsIgnoreCase("Words"));
+        }
+
+            else {
                 tvOutput.setText(words.length);
 
             }
